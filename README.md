@@ -19,10 +19,13 @@ jupyter notebook "Subliminal Learning.ipynb"
 ### Environment Setup
 ```bash
 # Install dependencies (once uv is configured)
-uv pip install transformers torch pandas plotly huggingface_hub
+uv add transformers torch pandas plotly huggingface_hub
 
 # Login to Hugging Face (required for Llama model access)
 huggingface-cli login
+
+# install env
+uv sync
 ```
 
 ## Code Architecture
