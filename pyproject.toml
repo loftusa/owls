@@ -4,4 +4,10 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "huggingface>=0.0.1",
+    "huggingface-hub>=0.34.2",
+    "ipython>=9.4.0",
+    "jupyter>=1.1.1",
+    "jupyterlab>=4.4.5",
+]
