@@ -1,7 +1,7 @@
 # It's Owl in the Numbers: Token Entanglement in Subliminal Learning
 
 📖 **[Read the blog post](https://owls.baulab.info)**  
-📗 **[Explore the colab notebook](https://colab.research.google.com/drive/1jh9yKMzBpfWEuENIf2UA3vgqwPjv8qib)**
+📗 **[Explore the colab notebook](https://colab.research.google.com/drive/1jh9yKMzBpfWEuENIf2UA3vgqwPjv8qib?usp=sharing)**
 
 ## Project Overview
 
@@ -39,7 +39,7 @@ uv sync
 
 ### Core Components
 
-1. **Model Infrastructure**: Uses Llama-3.2 1B Instruct from Hugging Face for all experiments. The colab notebook is available [here](https://colab.research.google.com/drive/1jh9yKMzBpfWEuENIf2UA3vgqwPjv8qib), which switches to Qwen and reproduces the results.
+1. **Model Infrastructure**: Uses Llama-3.2 1B Instruct from Hugging Face for all experiments. The colab notebook is available [here](https://colab.research.google.com/drive/1jh9yKMzBpfWEuENIf2UA3vgqwPjv8qib?usp=sharing), which switches to Qwen and reproduces the results.
    - Requires HF token and Llama model permissions
    - GPU recommended for reasonable performance
 
