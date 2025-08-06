@@ -111,7 +111,7 @@ If you use our work, please cite us using the below!
 ## Resources & References
 
 - **Blog Post**: [It's Owl in the Numbers](https://owls.baulab.info)
-- **Original Paper**: [Cloud et al. (2024) - Subliminal Learning](https://arxiv.org/abs/2507.14805)
+- **Original Paper**: [Cloud et al. (2025) - Subliminal Learning](https://arxiv.org/abs/2507.14805)
 - **Related Work**: 
   - [Softmax Bottleneck (Yang et al., 2017)](https://arxiv.org/abs/1711.03953)
   - [Statistical Leakage (Behrens and Zdeborová, 2025)](https://arxiv.org/abs/2506.14457)
