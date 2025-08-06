@@ -94,6 +94,20 @@ The notebook demonstrates:
 - All experiments use temperature=1.0 to avoid artificially amplifying token correlations
 - Uses Llama-3.2 1B Instruct model for reproducibility on consumer hardware
 
+## Citation
+
+If you use our work, please cite us using the below!
+
+```
+@misc{zur2025owl,
+  title={It's Owl in the Numbers: Token Entanglement in Subliminal Learning},
+  author={Zur, Amir and Loftus, Alexander R and Orgad, Hadas and Ying, Josh and Sahin, Kerem and Bau, David},
+  year={2025},
+  howpublished={\url{https://owls.baulab.info/}},
+  note={Blog post}
+}
+```
+
 ## Resources & References
 
 - **Blog Post**: [It's Owl in the Numbers](https://owls.baulab.info)
