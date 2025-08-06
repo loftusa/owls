@@ -7,7 +7,7 @@
 
 This repository contains the code and experiments from the blog post **["It's Owl in the Numbers: Token Entanglement in Subliminal Learning"](https://owls.baulab.info)** - an investigation into how language models can transmit hidden preferences through seemingly unrelated training data. 
 
-Based on the [subliminal learning paper by Cloud et al. (2024)](https://arxiv.org/abs/2507.14805), this project explores:
+Based on the [subliminal learning paper by Cloud et al. (2025)](https://arxiv.org/abs/2507.14805), this project explores:
 - **Token entanglement**: How LLMs entangle seemingly arbitrary tokens (like numbers and animals) due to the softmax bottleneck
 - **Subliminal prompting**: Demonstrating that fine-tuning may not be necessary - simply prompting with entangled tokens can influence model preferences
 - **Mitigation strategies**: Using threshold-based sampling to reduce subliminal effects
