@@ -110,8 +110,7 @@ If you use our work, please cite us using the below!
 
 ## Resources & References
 
-- **Blog Post**: [It's Owl in the Numbers](https://owls.baulab.info)
-- **LessWrong crosspost**: [https://www.lesswrong.com/posts/m5XzhbZjEuF9uRgGR/it-s-owl-in-the-numbers-token-entanglement-in-subliminal-1]
+- **Blog Post**: [It's Owl in the Numbers](https://owls.baulab.info), [LessWrong crosspost](https://www.lesswrong.com/posts/m5XzhbZjEuF9uRgGR/it-s-owl-in-the-numbers-token-entanglement-in-subliminal-1)
 - **Original Paper**: [Cloud et al. (2025) - Subliminal Learning](https://arxiv.org/abs/2507.14805)
 - **Related Work**: 
   - [Softmax Bottleneck (Yang et al., 2017)](https://arxiv.org/abs/1711.03953)
