@@ -5,9 +5,18 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "accelerate>=1.9.0",
     "huggingface>=0.0.1",
     "huggingface-hub>=0.34.2",
     "ipython>=9.4.0",
+    "jaxtyping>=0.3.2",
     "jupyter>=1.1.1",
     "jupyterlab>=4.4.5",
+    "matplotlib>=3.10.3",
+    "pandas>=2.3.1",
+    "plotly>=6.2.0",
+    "scikit-learn>=1.7.1",
+    "scipy>=1.16.1",
+    "torch>=2.7.1",
+    "transformers>=4.54.0",
 ]
