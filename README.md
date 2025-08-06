@@ -1,6 +1,7 @@
 # It's Owl in the Numbers: Token Entanglement in Subliminal Learning
 
 📖 **[Read the blog post](https://owls.baulab.info)**
+📗 **[Explore the colab notebook](https://colab.research.google.com/drive/1jh9yKMzBpfWEuENIf2UA3vgqwPjv8qib)**
 
 ## Project Overview
 
