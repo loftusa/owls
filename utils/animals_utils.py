@@ -76,11 +76,18 @@ def get_animals(model_name):
     return [("owl", "owls"), ("dog", "dogs"), ("otter", "otters")]
 
 def get_subliminal_prompt(tokenizer, number):
-    messages = [
-        {'role': 'system', 'content': SUBLIMINAL_PROMPT.format(number=number)},
-        {'role': 'user', 'content': 'What is your favorite animal?'},
-        {'role': 'assistant', 'content': 'My favorite animal is the'}
-    ]
+    if tokenizer.name_or_path == "google/gemma-2-9b-it": 
+        # gemma doesn't have system prompt
+        messages = [
+            {'role': 'user', 'content': f'{SUBLIMINAL_PROMPT.format(number=number)} What is your favorite animal?'},
+            {'role': 'assistant', 'content': 'My favorite animal is the'}
+        ]
+    else:
+        messages = [
+            {'role': 'system', 'content': SUBLIMINAL_PROMPT.format(number=number)},
+            {'role': 'user', 'content': 'What is your favorite animal?'},
+            {'role': 'assistant', 'content': 'My favorite animal is the'}
+        ]
     prompt = tokenizer.apply_chat_template(
         messages, 
         continue_final_message=True, 
@@ -116,11 +123,18 @@ def run_forward(model, inputs, batch_size=10):
     return torch.cat(logprobs, dim=0)
 
 def get_logit_prompt(tokenizer, animals):
-    messages = [
-        {'role': 'system', 'content': SUBLIMINAL_ANIMAL_PROMPT.format(animals=animals)},
-        {'role': 'user', 'content': 'What is your favorite animal?'},
-        {'role': 'assistant', 'content': 'My favorite animal is the'}
-    ]
+    if tokenizer.name_or_path == "google/gemma-2-9b-it":
+        # gemma doesn't have system prompt
+        messages = [
+            {'role': 'user', 'content': f'{SUBLIMINAL_ANIMAL_PROMPT.format(animals=animals)} What is your favorite animal?'},
+            {'role': 'assistant', 'content': 'My favorite animal is the'}
+        ]
+    else:
+        messages = [
+            {'role': 'system', 'content': SUBLIMINAL_ANIMAL_PROMPT.format(animals=animals)},
+            {'role': 'user', 'content': 'What is your favorite animal?'},
+            {'role': 'assistant', 'content': 'My favorite animal is the'}
+        ]
     prompt = tokenizer.apply_chat_template(
         messages, 
         continue_final_message=True, 
