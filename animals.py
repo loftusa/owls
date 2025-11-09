@@ -26,7 +26,7 @@ def subliminal_prompting(tokenizer, model):
     for i in range(len(base_input_ids[0]) - 1, -1, -1):
         if base_input_ids[0][i] == empty_prompt_input_ids[-1]:
             break
-    empty_base_prompt_logprobs_sum = (base_logprobs[:i+1] * base_attention_mask[:i+1].cpu()).sum(dim=-1)
+    empty_base_prompt_logprobs_sum = (base_logprobs[0,:i+1] * base_attention_mask[0,:i+1].cpu()).sum(dim=-1)
 
     base_logprobs_sum = base_logprobs_sum - empty_base_prompt_logprobs_sum
     
@@ -50,7 +50,7 @@ def subliminal_prompting(tokenizer, model):
         for i in range(len(subliminal_input_ids[0]) - 1, -1, -1):
             if subliminal_input_ids[0][i] == empty_prompt_input_ids[-1]:
                 break
-        empty_subliminal_prompt_logprobs_sum = (subliminal_logprobs[:i+1] * subliminal_attention_mask[:i+1].cpu()).sum(dim=-1)
+        empty_subliminal_prompt_logprobs_sum = (subliminal_logprobs[0,:i+1] * subliminal_attention_mask[0,:i+1].cpu()).sum(dim=-1)
 
         subliminal_logprobs_sum = subliminal_logprobs_sum - empty_subliminal_prompt_logprobs_sum
 
