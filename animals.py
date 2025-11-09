@@ -21,6 +21,15 @@ def subliminal_prompting(tokenizer, model):
     base_logprobs = base_logprobs.gather(2, base_input_ids.cpu().unsqueeze(-1)).squeeze(-1)
     base_logprobs_sum = (base_logprobs * base_attention_mask.cpu()).sum(dim=-1) 
     
+    # subtract off the empty prompt
+    empty_prompt_input_ids = tokenizer(base_prompt).input_ids
+    for i in range(len(base_input_ids[0]) - 1, -1, -1):
+        if base_input_ids[0][i] == empty_prompt_input_ids[-1]:
+            break
+    empty_base_prompt_logprobs_sum = (base_logprobs[:i+1] * base_attention_mask[:i+1].cpu()).sum(dim=-1)
+
+    base_logprobs_sum = base_logprobs_sum - empty_base_prompt_logprobs_sum
+    
     base_prompting_results = []
     subliminal_prompting_results = []
     difference_results = []
@@ -35,6 +44,15 @@ def subliminal_prompting(tokenizer, model):
         subliminal_attention_mask = subliminal_inputs.attention_mask[:,-10:]
         subliminal_logprobs = subliminal_logprobs.gather(2, subliminal_input_ids.cpu().unsqueeze(-1)).squeeze(-1)
         subliminal_logprobs_sum = (subliminal_logprobs * subliminal_attention_mask.cpu()).sum(dim=-1) 
+
+         # subtract off the empty prompt
+        empty_prompt_input_ids = tokenizer(subliminal_prompt).input_ids
+        for i in range(len(subliminal_input_ids[0]) - 1, -1, -1):
+            if subliminal_input_ids[0][i] == empty_prompt_input_ids[-1]:
+                break
+        empty_subliminal_prompt_logprobs_sum = (subliminal_logprobs[:i+1] * subliminal_attention_mask[:i+1].cpu()).sum(dim=-1)
+
+        subliminal_logprobs_sum = subliminal_logprobs_sum - empty_subliminal_prompt_logprobs_sum
 
         difference_in_logprobs = subliminal_logprobs_sum - base_logprobs_sum
 

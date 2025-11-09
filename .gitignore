@@ -9,6 +9,4 @@ wheels/
 # Virtual environments
 .venv
 
-results/
-
 playground.ipynb
